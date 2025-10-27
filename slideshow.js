@@ -5,8 +5,8 @@ const imageCount = 23;
 
 // Array mit Bildpfaden erzeugen
 let images = [];
-for (let i = 1; i <= imageCount; i++) {
-  images.push(images/${i}.jpg);
+for (let i = 0; i < imageCount; i++) { // du hast 0.jpg bis 22.jpg
+  images.push(`images/${i}.jpg`);
 }
 
 // Funktion zum Mischen (Fisher–Yates-Shuffle)
@@ -19,7 +19,7 @@ for (let i = images.length - 1; i > 0; i--) {
 images.forEach((src, index) => {
   const div = document.createElement("div");
   div.classList.add("slide");
-  div.style.backgroundImage = url('${src}');
+  div.style.backgroundImage = `url('${src}')`;
   if (index === 0) div.classList.add("active");
   slideshow.appendChild(div);
 });
