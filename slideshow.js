@@ -1,7 +1,7 @@
 const slideshow = document.getElementById("slideshow");
 
 // Anzahl der Bilder (0.jpg bis 22.jpg)
-const imageCount = 23;
+const imageCount = 24;
 
 // Bildpfade generieren
 let images = [];
